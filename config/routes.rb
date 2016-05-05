@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
-  get 'reviews/index'
+  root "/", to: "home/index", as: "root"
+  get '/reviews', to: 'reviews#index', as: "reviews"
 
-  get 'reviews/new'
+  get '/reviews/new', to: "reviews#new", as: "new_review"
 
-  get 'reviews/create'
+  post '/reviews', to: "reviews#create", as: "create_review"
 
-  get 'reviews/show'
+  get '/reviews/:id', to: "reviews#show", as: "show_review"
 
-  get 'reviews/update'
+  get '/reviews/:id/edit', to: "reviews#edit", as: "edit_review"
 
-  get 'reviews/destroy'
+  patch '/reviews/:id', to: "reviews#update", as: "update_review"
 
-  root to: "home#index"
+  delete '/reviews/:id', to: "reviews#destroy", as: "destroy_review"
 
-  get "/home", to: "home#index", as: "home"
 end
