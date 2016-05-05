@@ -1,2 +1,12 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<%= form_for @review do |r| %>
+  <div>
+    <%= r.text_field :city_name %>
+  </div>
+  <div>
+    <%= r.number_field :rating %>
+  </div>
+  <div>
+    <%= r.text_field :description %>
+  </div>
+  <%= r.submit %>
+<% end %>
