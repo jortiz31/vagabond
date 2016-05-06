@@ -1,0 +1,19 @@
+<%= form_for :user, url: "/users", method: "post" do |f| %>
+   <%= f.text_field :name %>
+   <%= f.text_field :date_joined %>
+   <%= f.text_field :current_city %>
+   <%= f.text_field :email %>
+
+   <%= f.submit "SAVE" %>
+ <% end %>
+
+ 
+ <% @users.each do |user| %>
+     <p>
+       <strong>Name:</strong> <%= user.name %><br>
+       <strong>Date Joined:</strong> <%= user.date_joined %>
+       <strong>Current City:</strong> <%= user.current_city %>
+       <strong>Email:</strong> <%= user.email %>
+
+     </p>
+   <% end %>
