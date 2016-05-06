@@ -26,5 +26,7 @@ body{
 }
 .user-form{
   font: lucida;
-  font-size: 22px;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 10px;
 }
