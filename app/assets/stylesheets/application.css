@@ -11,11 +11,12 @@ h1{
   font-weight: bolder;
 }
 body{
-  background-color: seagreen;
+  background-color: paleturquoise;
   font: lucida;
 }
 .reviewIndex{
-
+  background-color: seagreen;
+  font: 20px;
 }
 .reviewShow{
   font-weight: bolder;
