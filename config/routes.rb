@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
   root   to: "home#index"
+  root   to: "home#index"
+  # user routes
   get "/users", to: "users#index", as: "users"
   get "/users/new", to: "users#new", as: "new_user"
   post "/users", to: "users#create"
   get "users/:id", to: "users#show", as: "user"
-  # #sign_in/out session routes
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"
@@ -19,5 +20,4 @@ Rails.application.routes.draw do
   # get     "/cities/:id",                to: "cities#index",       as: "show_city"
   # get     "/cities/new",                to: "cities#new",         as: "new_city"
   # post    "/cities",                    to: "cities#create",      as: "post_city"
-
 end
