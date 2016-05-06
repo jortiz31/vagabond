@@ -1,2 +1,11 @@
-<h1>Reviews#show</h1>
-<p>Find me in app/views/reviews/show.html.erb</p>
+<h1>See a review</h1>
+<div class="reviewShow">
+  Welcome,  <%= @review.username %>
+            <%= @review.city_name %>
+            <%= @review.rating %>
+            <%= @review.description %>
+        </div>
+            <!-- <%= link_to ("edit", edit_page_path()) %> -->
+            <% end %>
+        </div>
+</div>

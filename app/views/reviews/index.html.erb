@@ -1,4 +1,9 @@
-<h1>Reviews#index</h1>
-<p><% @reviews.each do |review|%></p>
-
-<% end %>
+<div class="reviewIndex">
+  <h1>Welcome to Reviews main page!</h1>
+  <p><% @reviews.each do |review|%></p>
+    <h3><%= review.username %></h3>
+    <h3><%= review.city_name %></h3>
+    <h3><%= review.rating %></h3>
+    <h3><%= review.description %></h3>
+  <% end %>
+</div>
