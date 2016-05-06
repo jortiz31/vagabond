@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   get "/users/new", to: "users#new", as: "new_user"
   post "/users", to: "users#create"
   get "users/:id", to: "users#show", as: "user"
+  # log in/out/session routes
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"
-  # get     "/reviews",                   to: "reviews#index",      as: "reviews"
+
+  # review routes
+  get     "/reviews",                   to: "reviews#index",      as: "reviews"
   # get     "/reviews/new",               to: "reviews#new",        as: "new_review"
   # post    "/reviews",                   to: "reviews#create",     as: "create_review"
   # get     "/reviews/:id",               to: "reviews#show",       as: "show_review"
