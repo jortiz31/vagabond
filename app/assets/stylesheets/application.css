@@ -14,3 +14,16 @@ body{
   background-color: seagreen;
   font: lucida;
 }
+.reviewIndex{
+
+}
+.reviewShow{
+  font-weight: bolder;
+  font-style: italic;
+  font: lucida;
+  font-size: 22px;
+}
+.user-form{
+  font: lucida;
+  font-size: 22px;
+}
