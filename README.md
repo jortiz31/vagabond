@@ -8,7 +8,7 @@
 - User is able to click on either "log-in" or "sign-up"
 - Index page lists a collection of tropical cities
 - WITHOUT logging-in, user is able to have a **read-only** view of city-specific reviews
-- IF logged-in, user is directed to sessions page
+- ONLY IF logged-in, user is directed to sessions page
 - User is able to view city-specific reviews & user-specific reviews
 - User is able to **CRUD** his/her own city-specific reviews
 - User is able to upload travel images (limit photo count)
