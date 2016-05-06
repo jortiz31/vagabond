@@ -1,19 +1,23 @@
-<%= form_for :user, url: "/users", method: "post" do |f| %>
-   <%= f.text_field :name %>
-   <%= f.text_field :date_joined %>
-   <%= f.text_field :current_city %>
-   <%= f.text_field :email %>
+<div class="user-form">
+<div class="col-md-6 col-md-offset-3">
+    <%= form_for @user do |f| %>
+      <div>
+        <%= f.text_field :username, placeholder: "username" %>
+      </div>
 
-   <%= f.submit "SAVE" %>
- <% end %>
+      <div>
+        <%= f.text_field :email, placeholder: "email" %>
+      </div>
 
- 
- <% @users.each do |user| %>
-     <p>
-       <strong>Name:</strong> <%= user.name %><br>
-       <strong>Date Joined:</strong> <%= user.date_joined %>
-       <strong>Current City:</strong> <%= user.current_city %>
-       <strong>Email:</strong> <%= user.email %>
+      <div>
+        <%= f.text_field :current_city, placeholder: "where you from?" %>
+      </div>
 
-     </p>
-   <% end %>
+      <div>
+        <%= f.password_field :password, placeholder: "password" %>
+      </div>
+      <div>
+        <%= f.submit "Sign UP!" %>
+      </div>
+    <% end %>
+</div>
