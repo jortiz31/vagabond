@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root   to: "home#index"
   # user routes
   get "/users", to: "users#index", as: "users"
@@ -19,4 +20,5 @@ Rails.application.routes.draw do
   # get     "/cities/:id",                to: "cities#index",       as: "show_city"
   # get     "/cities/new",                to: "cities#new",         as: "new_city"
   # post    "/cities",                    to: "cities#create",      as: "post_city"
+
 end
