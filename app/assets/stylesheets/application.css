@@ -4,6 +4,7 @@
  *= require main
  */
 
+<<<<<<< HEAD
 h1{
   font-family: cursive;
   font-weight: bolder;
@@ -12,3 +13,13 @@ body{
   background-color: lightcoral;
   font: lucida;
 }
+=======
+ h1{
+   font-family: cursive;
+   font-weight: bolder;
+ }
+ body{
+   background-color: lightcoral;
+   font: lucida;
+ }
+>>>>>>> e267445eb999e9a2f2572e1e317e72482aa162bd
