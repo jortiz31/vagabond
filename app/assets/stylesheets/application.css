@@ -10,7 +10,43 @@ h1{
   font-weight: bolder;
   color: white;
 }
-.item{
+.first-slide{
+  display: block;
+  position: fixed;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+.second-slide{
+  display: block;
+  position: fixed;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+.third-slide{
+  display: block;
+  position: fixed;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+.fourth-slide{
+  display: block;
+  position: fixed;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+.fifth-slide{
   display: block;
   position: fixed;
   -webkit-filter: blur(1px);
