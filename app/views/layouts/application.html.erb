@@ -24,9 +24,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li> <%= link_to "Sign up", "/users/new" %> </li>
-                <li><a href="#about">Reviews</a></li>
-                <li><a href="#contact">About</a></li>
+                <li> <%= link_to "Reviews", "/reviews" %> </li>
                 <% if current_user %>
                   <li><%= link_to "Profile", user_path(current_user) %></li>
                   <li><%= link_to "Log Out", logout_path %></li>

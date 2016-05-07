@@ -3,8 +3,8 @@ class CreateReviews < ActiveRecord::Migration
     create_table :reviews do |t|
       t.timestamps
 
-      # t.belongs_to :user
-      # t.belongs_to :city
+      t.belongs_to :user
+      t.belongs_to :city
     end
   end
 end

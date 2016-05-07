@@ -3,8 +3,7 @@ class CreateCities < ActiveRecord::Migration
     create_table :cities do |t|
       t.timestamps
 
-      # t.belongs_to :user
-      # t.belongs_to :review
+      has_many :reviews
     end
   end
 end
