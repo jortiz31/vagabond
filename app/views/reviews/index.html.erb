@@ -1,7 +1,11 @@
-<div> <%= @user.username %> has visited the following cities</div>
 
-<ul>
-  <% @cities.each do |cit| %>
-  <li> <%= cit.city_name %> </li>
+<div class="reviewIndex">
+  <h1>Welcome to Reviews main page!</h1>
+  <p><% @reviews.each do |review|%></p>
+    <h3><%= review.username %></h3>
+    <h3><%= review.city_name %></h3>
+    <h3><%= review.rating %></h3>
+    <h3><%= review.description %></h3>
+
   <% end %>
 </ul>
