@@ -1,6 +1,7 @@
-<div class="reviews">
-  <h1>Reviews#index</h1>
-  <p><% @reviews.each do |review|%></p>
+<div> <%= @user.username %> has visited the following cities</div>
 
+<ul>
+  <% @cities.each do |cit| %>
+  <li> <%= cit.city_name %> </li>
   <% end %>
-</div>
+</ul>

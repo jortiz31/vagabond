@@ -1,0 +1,10 @@
+<% @cities.each do |city| %>
+  <div>
+    <h3> <%= city.city_name %> </h3>
+    <h4> <%= city.country %> </h4>
+    <% if current_user %>
+      <%= button_to "Add review", reviews_path(city) %>
+    <% end %>
+  </div>
+  <br>
+<% end %>
