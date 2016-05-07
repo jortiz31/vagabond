@@ -8,9 +8,26 @@
 h1{
   font-family: cursive;
   font-weight: bolder;
+  color: white;
+}
+.item{
+  display: block;
+  position: fixed;
+  -webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+.carousel-caption{
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 body{
-  background-color: #CCCCFF;
+  background-color: lightcyan;
   font-family: cursive;
   font-size: 24px;
   font-weight: bolder;
@@ -23,7 +40,7 @@ body{
   font-weight: bolder;
   font-style: italic;
   font: lucida;
-  font-size: 22px;
+  font-size: 21px;
 }
 .user-form{
   font: lucida;
