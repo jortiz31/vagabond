@@ -3,9 +3,8 @@
  *= require bootstrap.min
  *= require carousel
  *= require main
- *= require users
  */
-
+ 
 h1{
   font-family: cursive;
   font-weight: bolder;
