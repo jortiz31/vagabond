@@ -3,17 +3,18 @@ class ReviewsController < ApplicationController
   before_action :get_id, only: [:show, :destroy, :edit, :update]
 
   def index
-    @user = User.find(params[:user_id])
+    @user = User.find_by_id(params[:user_id])
     @cities = @user.cities
 
     render :index
   end
 
   def create
-    @city = City.find(params[:city_id])
-    @city.users.push(current_user)
+    @user = current_user
+    @review = review.create(post_params)
+    @user.review << @review
 
-    redirect_to current_user
+    redirect_to reviews_path
   end
 
 end

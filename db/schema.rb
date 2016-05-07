@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160507153534) do
+ActiveRecord::Schema.define(version: 20160507224520) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,8 +42,12 @@ ActiveRecord::Schema.define(version: 20160507153534) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "review_id"
   end
+
+  add_index "users", ["review_id"], name: "index_users_on_review_id", using: :btree
 
   add_foreign_key "reviews", "cities"
   add_foreign_key "reviews", "users"
+  add_foreign_key "users", "reviews"
 end
