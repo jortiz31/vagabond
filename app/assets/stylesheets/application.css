@@ -7,4 +7,6 @@
 body{
   background-color: #CCCCFF;
   font-family: cursive;
+  font: 22px;
+  font-weight: bolder;
 }
