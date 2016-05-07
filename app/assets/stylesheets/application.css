@@ -4,3 +4,7 @@
  *= require carousel
  *= require main
  */
+body{
+  background-color: lightskyblue;
+  font-family: cursive;
+}
