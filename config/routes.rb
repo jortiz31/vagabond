@@ -6,16 +6,16 @@ Rails.application.routes.draw do
   get "/users/new", to: "users#new", as: "new_user"
   post "/users", to: "users#create"
   get "users/:id", to: "users#show", as: "user"
+  get "users/:id/edit", to: "users#edit", as: "edit_user"
+  patch "users/:id", to: "users#update"
   # log in/out/session routes
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"
-
   # city routes
   get "/cities", to: "cities#index", as: "city"
   get "/cities/new", to: "cities#new", as: "new_city"
   post "cities", to: "cities#create"
-
   # review routes
   get "/users/:user_id/reviews", to: "reviews#index", as: "reviews"
   get "/users/:user_id/reviews/new", to: "reviews#new", as: ""
