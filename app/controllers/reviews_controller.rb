@@ -3,10 +3,7 @@ class ReviewsController < ApplicationController
   before_action :get_id, only: [:show, :destroy, :edit, :update]
 
   def index
-    @user = User.find(params[:user_id])
-    @cities = @user.cities
-
-    render :index
+    @reviews = Review.all
   end
 
   def create

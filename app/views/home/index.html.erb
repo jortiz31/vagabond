@@ -1,6 +1,6 @@
 Home Index Page
 <% if current_user %>
-<h4>Welcome, </h4><%= @user.username %>
+<h4>Welcome, </h4><%= current_user.username %>
 <% else %>
 <p> Sign Up Today! </p> <%= link_to "sign up", "/users/new" %>
 <% end %>
