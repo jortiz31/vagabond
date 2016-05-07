@@ -17,8 +17,9 @@ Rails.application.routes.draw do
   post "cities", to: "cities#create"
 
   # review routes
-  get "/reviews", to: "reviews#index", as: "reviews"
+  get "/users/:user_id/reviews", to: "reviews#index", as: "reviews"
+  get "/users/:user_id/reviews/new", to: "reviews#new", as: ""
   # get "/users/:user_id/cities", to: "reviews#index", as: "user_cities"
-  # post "cities/:city_id/users", to: "reviews#create", as: "reviews"
+  # post "cities/:city_id/users", to: "reviews#create", as: "user_reviews"
 
 end
