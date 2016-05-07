@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :reviews, dependent: :destroy
+  has_many :cities, through: :reviews
 
   has_secure_password
 
