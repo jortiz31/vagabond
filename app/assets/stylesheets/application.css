@@ -5,7 +5,7 @@
  *= require main
  */
 
-h1{
+h2{
   font-family: cursive;
   font-weight: bolder;
   color: white;
@@ -13,52 +13,52 @@ h1{
 .first-slide{
   display: block;
   position: fixed;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .second-slide{
   display: block;
   position: fixed;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .third-slide{
   display: block;
   position: fixed;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .fourth-slide{
   display: block;
   position: fixed;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .fifth-slide{
   display: block;
   position: fixed;
-  -webkit-filter: blur(1px);
-  -moz-filter: blur(1px);
-  -o-filter: blur(1px);
-  -ms-filter: blur(1px);
-  filter: blur(1px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
 }
 .carousel-caption{
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 0;
   margin-left: 20px;
   margin-right: 20px;
 }
@@ -76,7 +76,7 @@ body{
   font-weight: bolder;
   font-style: italic;
   font: lucida;
-  font-size: 21px;
+  font-size: 22px;
 }
 .user-form{
   font: lucida;
