@@ -2,6 +2,7 @@
   <div class="row">
     <div class="col-md-8">
       Welcome, <%= @user.username %>
+    <%= button_to "edit profile", @user, method: :patch, class: "btn btn-danger" %>
     </div>
   </div>
 </div>

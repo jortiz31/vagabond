@@ -1,0 +1,7 @@
+<%= form_for @user do |f| %>
+  <%= f.text_field :username, placeholder: "username" %>
+  <%= f.text_field :email, placeholder: "email" %>
+  <%= f.text_field :current_city, placeholder: "location" %>
+  <%= f.password_field :password, placeholder: "password" %>
+  <%= f.submit "Save changes" %>
+<% end  %>
