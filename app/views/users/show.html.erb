@@ -1,8 +1,5 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      Welcome, <%= @user.username %>
-    <%= button_to "edit profile", @user, method: :patch, class: "btn btn-danger" %>
-    </div>
-  </div>
-</div>
+<h4>Username:  <small> <%= @user.username %> </small></h4>
+<h4>Email:  <small> <%= @user.email %> </small></h4>
+<h4>Location: <small><%= @user.current_city %> </small></h4>
+<h4>Joined On: <small><%= @user.created_at.strftime("%b %d, %Y") %> </small></h4>
+<%= button_to "edit profile", @user, method: :patch, class: "btn btn-danger" %>

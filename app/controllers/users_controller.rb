@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
 
-<<<<<<< HEAD
-=======
   before_action :logged_in?, only: [:show]
 
->>>>>>> 1c0e81c8a9d1de5172d2eb5117b65e873ee2b04c
+
   def index
     @users = User.all
     render :index
