@@ -1,4 +1,5 @@
-h1{
+
+h2{
   font-family: cursive;
   font-weight: bolder;
   color: white;
@@ -56,9 +57,10 @@ h1{
   margin-right: 20px;
 }
 body{
-  background-color: lightcyan;
+  background-color: black;
+  color:white;
   font-family: cursive;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: bolder;
 }
 .reviewIndex{

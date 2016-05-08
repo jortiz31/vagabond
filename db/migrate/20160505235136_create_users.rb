@@ -8,8 +8,6 @@ class CreateUsers < ActiveRecord::Migration
 
       t.timestamps null: false
 
-      has_many :reviews
-
     end
   end
 end
