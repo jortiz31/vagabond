@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   # review routes
   get "/users/:user_id/reviews", to: "reviews#index", as: "reviews"
   get "/users/:user_id/reviews/new", to: "reviews#new", as: "new_review"
+
   get "/users/:user_id/cities", to: "reviews#index", as: "user_cities"
   get "/users/:user_id/review", to: "reviews#show", as: "user_review"
   post "/cities/:city_id/users", to: "reviews#create", as: "user_reviews"
