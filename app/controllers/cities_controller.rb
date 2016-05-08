@@ -21,18 +21,12 @@ class CitiesController < ApplicationController
   end
 
 
-
     # show the edit city form
     def edit
-      # get the city id from the url params
       city_id = params[:id]
-      # use `city` to find the city in the database
-      # and save it to an instance variable
       @city = City.find_by_id(city_id)
-      # render the edit view (it has access to instance variable)
       render :edit
     end
-
 
     def update
       city_id = params[:id]
