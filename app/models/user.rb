@@ -1,7 +1,8 @@
 class User < ActiveRecord::Base
   has_secure_password
-  
+
   has_many :reviews, dependent: :destroy
+  accepts_nested_attributes_for :reviews
 
 
   validates :username,
@@ -22,10 +23,6 @@ class User < ActiveRecord::Base
             presence: true,
             format: {with: /[@]/, message: "invalid email"},
             length: { minimum: 10, maximum: 50 }
-
-
-  has_many :reviews
-  has_many :cities, through: :reviews
 
 
   def self.confirm(params)

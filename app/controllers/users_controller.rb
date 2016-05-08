@@ -1,16 +1,9 @@
 class UsersController < ApplicationController
-
   before_action :logged_in?, only: [:show]
-
 
   def index
     @users = User.all
     render :index
-  end
-
-  def show
-    @user = User.find(params[:id])
-    render :show
   end
 
   def new
@@ -31,6 +24,11 @@ class UsersController < ApplicationController
     redirect_to @user
   end
 
+  def show
+    @user = User.find(params[:id])
+    render :show
+  end
+
 
   def edit
     user_id = params[:id]
@@ -41,7 +39,7 @@ class UsersController < ApplicationController
   def update
     user_id = params[:id]
     user = User.find_by_id(user_id)
-    user.update(user_params)
+    user.update_attributes(user_params)
     redirect_to user_path(user)
   end
 
@@ -53,11 +51,10 @@ class UsersController < ApplicationController
     redirect_to users_path(users)
   end
 
-
-
   private
+
   def user_params
-    params.require(:user).permit(:username, :current_city, :email, :password)
+    params.require(:user).permit(:username, :current_city, :email, :password) if params[:user]
   end
 
 end
