@@ -15,7 +15,7 @@
     <ul>
       <% if current_user %>
       <li> Hello, <%= current_user.username %> </li>
-      <li><%= link_to "Cities", user_cities_path(current_user) %></li>
+      <li><%= link_to "Destinations", user_cities_path(current_user) %></li>
       <li><%= link_to "Profile", user_path(current_user) %></li>
       <li><%= link_to "Log Out", logout_path %></li>
       <% else %>
@@ -25,8 +25,6 @@
       <% end %>
     </ul>
   </div>
-
- <%= link_to "Destinations", "cities" %>
 
 <%= yield %>
 
