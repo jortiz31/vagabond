@@ -1,10 +1,11 @@
 
-<%= @reviews.each do |review| %>
+
 
 <div>
-  <%= @user.username %> has reviews on <%= @city.city_name %>
-  <%= button_to "New Review", reviews_path(review) %>
+
+  <h3><%= @user.username %> has reviews on:</h3>
+  <% @cities.each do |city| %>
+  <%= city.city_name %>
+  
   <% end %>
 </div>
-
-<% end %>

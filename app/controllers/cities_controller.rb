@@ -1,7 +1,7 @@
 class CitiesController < ApplicationController
 
   def index
-    @cities = Cities.all
+    @cities = City.all
     render :index
   end
 
@@ -19,6 +19,22 @@ class CitiesController < ApplicationController
     @city = City.create(city_params)
     redirect_to cities_path
   end
+
+
+    # show the edit city form
+    def edit
+      city_id = params[:id]
+      @city = City.find_by_id(city_id)
+      render :edit
+    end
+
+    def update
+      city_id = params[:id]
+      city = City.find_by_id(city_id)
+      city_params = get_city_params
+      city.update_attributes(city_params)
+      redirect_to new_city
+    end
 
 
   private
