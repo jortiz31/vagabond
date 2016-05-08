@@ -1,3 +1,10 @@
 
-
 <%= @reviews.each do |review| %>
+
+<div>
+  <%= @user.username %> has reviews on <%= @city.city_name %>
+  <%= button_to "New Review", reviews_path(review) %>
+  <% end %>
+</div>
+
+<% end %>

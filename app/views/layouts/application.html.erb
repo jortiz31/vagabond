@@ -10,18 +10,20 @@
   <title>VagaBond</title>
 </head>
 <body>
-  <p> <%= link_to "Vagabond", "/" %> </p>
-  <ul>
-    <% if current_user %>
-    <li> Hello, <%= current_user.username %> </li>
-    <li> <%= link_to "Reviews", user_cities_path(current_user) %> </li>
-    <li><%= link_to "Profile", user_path(current_user) %></li>
-    <li><%= link_to "Log Out", logout_path %></li>
-    <% else %>
-    <li><%= link_to "Sign Up", new_user_path %></li>
-    <li><%= link_to "Log In", login_path %></li>
-    <% end %>
-  </ul>
+  <div class = "linkText" >
+    <p> <%= link_to "Home", "/" %> </p>
+    <ul>
+      <% if current_user %>
+      <li> Hello, <%= current_user.username %> </li>
+      <li> <%= link_to "Reviews", user_cities_path(current_user) %> </li>
+      <li><%= link_to "Profile", user_path(current_user) %></li>
+      <li><%= link_to "Log Out", logout_path %></li>
+      <% else %>
+      <li><%= link_to "Sign Up", new_user_path %></li>
+      <li><%= link_to "Log In", login_path %></li>
+      <% end %>
+    </ul>
+  </div>
 
 <%= yield %>
 
