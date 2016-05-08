@@ -6,6 +6,11 @@ class UsersController < ApplicationController
     render :index
   end
 
+  def show
+    @user = User.find(params[:id])
+    render :show
+  end
+
   def new
     @user = User.new
     render :new
@@ -16,12 +21,6 @@ class UsersController < ApplicationController
     login (@user)
     redirect_to @user
   end
-
-  def show
-    @user = User.find(params[:id])
-    render :show
-  end
-
 
   def edit
     user_id = params[:id]
