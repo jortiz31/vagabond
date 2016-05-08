@@ -6,7 +6,7 @@
             <%= @review.rating %>
             <%= @review.description %>
         </div>
-            <!-- <%= link_to ("edit", edit_page_path()) %> -->
+            <%= button_to "Delete Review", reviews.destroy(reviews_params), method: :delete %>
             <% end %>
         </div>
 </div>
