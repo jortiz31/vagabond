@@ -10,17 +10,21 @@ class ReviewsController < ApplicationController
     render :index
   end
 
-#add reviews to user
-  def create
-    @user = User.find(params[:id])
-    @user.reviews.push(current_user)
-    redirect_to reviews_path
-  end
-
+  #add reviews to user
   def new
+    @city = City.find(params[:id])
+    @user = User.find(params[:id])
     @review = Review.new
 
     render :new
+  end
+
+  def create
+    @review = Review.create(reviews_params)
+    @city = City.find(params[:id])
+    @city.reviews << @review
+
+    redirect_to city_path(@city)
   end
 
   def show
@@ -49,11 +53,9 @@ class ReviewsController < ApplicationController
   end
 
   private
+
     def reviews_params
-      params.require(:reviews).permit(:city_name, :description, :rating)
+      params.require(:review).permit(:description, :rating)
     end
 
-    def get_id
-      @user = User.find(params[:id])
-    end
 end

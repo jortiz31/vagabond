@@ -2,6 +2,10 @@
   padding-top:30px;
 }
 
+.pad-down {
+  margin-top: 55px;
+}
+
 .logged {
   font-size: 1em;
 }

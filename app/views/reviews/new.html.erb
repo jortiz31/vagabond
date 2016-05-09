@@ -1,32 +1,19 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
-      <%= form_for @review, :html => {:class => "form-signin"} do |rev| %>
-        <h2 class="form-signin-heading">Write a Review</h2>
+      <%= form_for :review, url: create_review_path, method: "post", :html => {:class => "form-signin"} do |rev| %>
+        <h2 class="form-signin-heading"> <%= @city.city_name %> </h2>
+          <h3><small>Write a Review</small></h3>
         <div class="form-group">
-          <%= f.label :username, "Username", class: "sr-only" %>
-          <%= f.text_field :username, placeholder: "Username", class: "form-control", :required => true, autofocus: true %>
-        </div>
-        <div class="form-group">
-          <%= f.label :current_city, "Current City", class: "sr-only" %>
-          <%= f.text_field :current_city, placeholder: "State, Country", class: "form-control", :required => true, autofocus: true %>
+          <%= rev.label :description, "Description", class: "sr-only" %>
+          <%= rev.text_area :description, placeholder: "description", class: "form-control", :required => true, autofocus: true %>
         </div>
 
         <div class="form-group">
-          <%= f.label :email, "Email Address", class: "sr-only" %>
-          <%= f.text_field :email, placeholder: "email", class: "form-control", :required => true, autofocus: true %>
+          <%= rev.label :rating, "rating", class: "sr-only" %>
+          <%= rev.number_field :rating, placeholder: "rating", class: "form-control", :required => true, autofocus: true %>
         </div>
-
-        <div class="form-group">
-          <%= f.label :password, "Password", class: "sr-only" %>
-          <%= f.password_field :password, placeholder: "password", class: "form-control", :required => true, autofocus: true %>
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <%= f.submit "Sign Up!", class: "btn btn-lg btn-primary btn-block" %>
+        <%= rev.submit "Submit", class: "btn btn-lg btn-primary" %>
       <% end %>
     </div>
   </div>
