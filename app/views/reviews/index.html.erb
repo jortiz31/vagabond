@@ -1,10 +1,8 @@
 
-<%= @reviews.each do |review| %>
-
-<div>
-  <%= @user.username %> has reviews on <%= @city.city_name %>
-  <%= button_to "New Review", reviews_path(review) %>
-  <% end %>
-</div>
-
+<h1><%=@user.username%> has made reviews on the following cities:</h1>
+<ul>
+<% @cities.each do |city| %>
+<li><%= city.city_name %>, <%= city.country %> -- <%=link_to "See Review", review_path(current_user)  %>
+</li>
 <% end %>
+</ul>
