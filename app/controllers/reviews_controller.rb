@@ -12,7 +12,8 @@ class ReviewsController < ApplicationController
 #add reviews to user
   def create
     @user = User.find(params[:id])
-    @user.reviews.push(current_user)
+    @city = City.find(params[:id])
+    @user.reviews.push(@city)
     redirect_to reviews_path
   end
 
