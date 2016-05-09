@@ -1,5 +1,25 @@
-  <%= form_for @user, url: "/sessions", method: "post" do |f| %>
-      <%= f.text_field :email, placeholder: "Email" %>
-      <%= f.password_field :password, placeholder: "Password" %>
-    <%= f.submit "Sign In" %>
-  <% end %>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for @user, url: "/sessions", method: "post" do |f| %>
+          <h2 class="form-login-heading">Welcome Home</h2>
+          <div class="form-group">
+            <%= f.label :email, "Email Address", class: "sr-only" %>
+            <%= f.text_field :email, placeholder: "email", class: "form-control", :required => true, autofocus: true %>
+          </div>
+          <div class="form-group">
+            <%= f.label :password, "Password", class: "sr-only" %>
+            <%= f.password_field :password, placeholder: "password", class: "form-control", :required => true, autofocus: true %>
+          </div>
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" value="remember-me"> Remember me
+            </label>
+          </div>
+            <%= f.submit "Sign In" , class: "btn btn-lg btn-primary btn-block" %>
+        <% end %>
+      </div>
+    </div>
+  </div> <!-- /container -->
