@@ -38,8 +38,9 @@ class UsersController < ApplicationController
 
   def destroy
     user_id = params[:id]
-    user = User.find_by_id(user_id)
-    user.destroy(current_user)
+    @user = User.find_by_id(user_id)
+    @user=current_user
+    User.destroy(@user)
     flash[:success] = "User deleted"
     redirect_to root_path
   end

@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   patch "/users/:id", to: "users#update"
   delete "/users/:id", to: "users#destroy"
   # log in/out/session routes
-  get "/login", to: "sessions#new", as: "new_session"
+  get "/login", to: "sessions#new", as: "login"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create", as: "post_session"
   # city routes
