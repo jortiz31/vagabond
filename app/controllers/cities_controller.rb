@@ -7,6 +7,7 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @review = Review.where(city: @city.city_name)
     render :show
   end
 
@@ -19,7 +20,6 @@ class CitiesController < ApplicationController
     @city = City.create(city_params)
     redirect_to cities_path
   end
-
 
     # show the edit city form
     def edit

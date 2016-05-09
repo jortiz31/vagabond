@@ -12,31 +12,30 @@ class ReviewsController < ApplicationController
 
 #add reviews to user
   def create
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     @user.reviews.push(current_user)
     redirect_to reviews_path
   end
 
   def show
-    @user = User.find(params[:user_id])
-    @review = @user.reviews
+
     render :show
   end
 
   def edit
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     render :edit
 
   end
 
   def update
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     reviews.update_attributes(reviews_params)
     @user.reviews.update(current_user)
   end
 
   def destroy
-    @user = User.find(params[:user_id])
+    @user = User.find(params[:id])
     reviews.destroy(reviews_params)
     redirect_to reviews_path
   end
@@ -46,5 +45,7 @@ class ReviewsController < ApplicationController
       params.require(:reviews).permit(:city_name, :description, :rating)
     end
 
-
+    def get_id
+      @user = User.find(params[:id])
+    end
 end

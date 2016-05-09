@@ -1,6 +1,7 @@
-<div>
-  <h3><%= @user.username %> has reviews on:</h3>
-  <% @cities.each do |city| %>
-  <%=link_to city.city_name, user_review_path(current_user)  %>
-  <% end %>
-</div>
+<h1>User: <%=@user.username%>, has made reviews on the following cities:</h1>
+<ul>
+<% @cities.each do |city| %>
+<li><%= city.city_name %>, <%= city.country %> -- <%=link_to "See Review", review_path(current_user)  %>
+</li>
+<% end %>
+</ul>
