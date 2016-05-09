@@ -5,7 +5,6 @@ class ReviewsController < ApplicationController
 
 # display list of cities that a specific user belongs to
   def index
-    @reviews = Review.all
     @user = User.find(params[:user_id])
     @cities = @user.cities
     render :index
