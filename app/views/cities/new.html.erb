@@ -1,9 +1,21 @@
-<%= form_for @city do |f| %>
-  <div>
-    <%= f.text_field :city_name, placeholder: "Enter tropical destination" %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <%= form_for @city do |f| %>
+        <h2 class="form-city-heading">Places</h2>
+        <div class="form-group">
+          <div>
+            <%= f.label :city_name, "City Name", class: "sr-only" %>
+            <%= f.text_field :city_name, placeholder: "Enter tropical destination" %>
+          </div>
+          <div>
+            <%= f.label :country, "Country or Territory", class: "sr-only" %>
+            <%= f.text_field :country, placeholder: "Enter Country"%>
+          </div>
+          <%= f.submit "Add City", class: "btn btn-lg btn-primary btn-block" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-  <div>
-    <%= f.text_field :country, placeholder: "Enter Country"%>
-  </div>
-  <%= f.submit %>
-<% end %>
+ <!-- /container -->

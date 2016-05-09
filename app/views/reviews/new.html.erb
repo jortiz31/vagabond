@@ -1,18 +1,26 @@
 
-<div class="reviewNew">
-  <%= form_for @review do |r| %>
-    <div>
-      <%= r.text_field :city_name %>
+  <div class="reviewNew">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= form_for @review do |r| %>
+          <h2 class="form-signin-heading">Welcome to the club!</h2>
+            <%= r.label :city_name, "City Name", class: "sr-only" %>
+            <%= r.text_field :city_name, placeholder: "State or Territory", class: "form-control", :required => true, autofocus: true %>
+          <div>
+            <%= r.label :country, "State or Territory", class: "sr-only" %>
+            <%= r.text_field :country, class: "form-control", :required => true, autofocus: true %> %>
+          </div>
+          <div>
+            <%= r.number_field :rating %>
+          </div>
+          <div>
+            <%= f.label :description, "You experienced...", class: "sr-only" %>
+            <%= r.text_area :description, placeholder: "Tell us your story", class: "form-control", :required =>true, autofocus: true %>
+          </div>
+          <%= r.submit "Post Review", class: "btn btn-lg btn-primary btn-block" %>
+          <% end %>
+        </div>
+      </div>
     </div>
-    <div>
-      <%= r.text_field :country %>
-    </div>
-    <div>
-      <%= r.number_field :rating %>
-    </div>
-    <div>
-      <%= r.text_field :description %>
-    </div>
-    <%= r.submit %>
-  <% end %>
-</div>
+  </div>
