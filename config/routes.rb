@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # log in/out/session routes
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
-  post "/sessions", to: "sessions#create"
+  post "/sessions", to: "sessions#create", as: "post_session"
   # city routes
   get "/cities", to: "cities#index", as: "cities"
   get "/cities/new", to: "cities#new", as: "new_city"

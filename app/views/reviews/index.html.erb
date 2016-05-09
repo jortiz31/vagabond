@@ -1,12 +1,6 @@
-
-
-
 <div>
-
   <h3><%= @user.username %> has reviews on:</h3>
   <% @cities.each do |city| %>
   <%=link_to city.city_name, user_review_path(current_user)  %>
-
-
   <% end %>
 </div>
