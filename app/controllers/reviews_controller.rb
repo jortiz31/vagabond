@@ -17,6 +17,11 @@ class ReviewsController < ApplicationController
     redirect_to reviews_path
   end
 
+  def show
+    
+    render :show
+  end
+
   def edit
     @user = User.find(params[:user_id])
     render :edit
@@ -40,5 +45,7 @@ class ReviewsController < ApplicationController
       params.require(:reviews).permit(:city_name, :description, :rating)
     end
 
-
+    def get_id
+      @user = User.find(params[:user_id])
+    end
 end
