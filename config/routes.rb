@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get "/users/:user_id/reviews", to: "reviews#index", as: "reviews"
   get "/users/:user_id/reviews/new", to: "reviews#new", as: "new_review"
   get "/users/:user_id/cities", to: "reviews#index", as: "user_cities"
+  get "/users/:user_id/review", to: "reviews#show", as: "review"
   post "/cities/:city_id/users", to: "reviews#create", as: "user_reviews"
   get "/users/:user_id/reviews/:id/edit", to: "reviews#edit", as: "edit_reviews"
   patch "/users/:user_id/reviews/:id", to: "reviews#update", as: "update_reviews"
