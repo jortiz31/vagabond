@@ -7,6 +7,7 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @review = Review.where(city: @city.city_name)
     render :show
   end
 
@@ -24,12 +25,8 @@ class CitiesController < ApplicationController
 
     # show the edit city form
     def edit
-      # get the city id from the url params
       city_id = params[:id]
-      # use `city` to find the city in the database
-      # and save it to an instance variable
       @city = City.find_by_id(city_id)
-      # render the edit view (it has access to instance variable)
       render :edit
     end
 
