@@ -7,6 +7,7 @@ class CitiesController < ApplicationController
 
   def show
     @city = City.find(params[:id])
+    @review = Review.where(city: @city.city_name)
     render :show
   end
 
