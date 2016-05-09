@@ -6,7 +6,6 @@ class ReviewsController < ApplicationController
 # display list of cities that a specific user belongs to
   def index
     @user = User.find(params[:id])
-    @cities = @user.cities
     render :index
   end
 
@@ -18,7 +17,6 @@ class ReviewsController < ApplicationController
   end
 
   def show
-
     render :show
   end
 
