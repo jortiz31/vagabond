@@ -32,15 +32,16 @@ class UsersController < ApplicationController
     user_id = params[:id]
     user = User.find_by_id(user_id)
     user.update_attributes(user_params)
+    flash[:success] = "User Updated"
     redirect_to user_path(user)
   end
 
   def destroy
     user_id = params[:id]
     user = User.find_by_id(user_id)
-    user.destroy(user_params)
+    user.destroy(current_user)
     flash[:success] = "User deleted"
-    redirect_to users_path(users)
+    redirect_to root_path
   end
 
   private

@@ -31,8 +31,10 @@
                           <%= link_to 'Options <b class="caret"></b>'.html_safe, root_path, :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle', class: "btn btn-warning btn-lg" %>
                           <span class="sr-only">Toggle Dropdown</span>
                           <ul class="dropdown-menu">
-                            <li><a href="#">Edit Profile</a></li>
-                            <li><a href="#">Delte Profile</a></li>
+                            <!-- <li><a href="#">Edit Profile</a></li> -->
+                            <li> <%= link_to "edit profile", edit_user_path(current_user) %> </li>
+                            <li> <%= link_to "delete profile", current_user, method: :delete %> </li>
+                            <!-- <li><a href="#">Delte Profile</a></li> -->
                           </ul>
                         </div>
                       </div>
