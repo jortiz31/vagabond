@@ -8,12 +8,22 @@ body {
   background-color: slategray;
 }
 h2{
+  margin-left: 10px;
   font-family: cursive;
 }
 p{
+  margin-top: 10px;
+  margin-left: 10px;
   color: white;
   font: lucida;
   font-family: fantasy;
+}
+.cityCount{
+  margin-left: 30px;
+  color: white;
+}
+.editButton{
+  margin-top: 20px;
 }
 footer {
   padding: 30px 0;
