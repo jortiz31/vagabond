@@ -10,7 +10,7 @@ There are currently <%= @cities.length %>, destinations on our list!
     <h3> <%= city.city_name %> </h3>
     <h4> <%= city.country %> </h4>
     <% if current_user %>
-      <%= button_to "Add review", reviews_path(city) %>
+      <%= link_to "Add review", new_review_path(city) %>
     <% end %>
   <br>
 <% end %>

@@ -1,3 +1,7 @@
 <div>
   Welcome to, <%= @city.city_name %>
+              <% @city.reviews.each do |rev| %>
+                <%= rev.rating %>
+                <%= rev.description %>
+              <% end %>
 </div>

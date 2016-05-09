@@ -14,6 +14,7 @@
                           <h4>Location: <small><%= @user.current_city %></small></h4>
                           <h4>Email: <small><%= @user.email %></small></h4>
                           <p class="profile">Joined On: <small><%= @user.created_at.strftime("%b %d, %Y") %> </small></p>
+
                           <!-- Split button -->
                         <div class="btn-group">
                           <%= link_to 'Options <b class="caret"></b>'.html_safe, root_path, :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle', class: "btn btn-warning btn-lg" %>
@@ -25,6 +26,11 @@
                           </ul>
                         </div>
                       </div>
+                      <h4>cities and reviews testing</h4>
+                      <% @user.reviews.each do |cit| %>
+                        <%= cit.rating %>
+                        <%= cit.description %>
+                      <% end %>
 
                   </div>
               </div>
