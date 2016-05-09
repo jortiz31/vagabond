@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   get "/users/:id/edit", to: "users#edit", as: "edit_user"
   patch "/users/:id", to: "users#update"
   # log in/out/session routes
-  get "/login", to: "sessions#new"
-  get "/logout", to: "sessions#destroy"
-  post "/sessions", to: "sessions#create"
+  get "/login", to: "sessions#new", as:"login"
+  get "/logout", to: "sessions#destroy", as: "logout"
+  post "/sessions", to: "sessions#create", as: "new_session"
   # city routes
   get "/cities", to: "cities#index", as: "cities"
   get "/cities/new", to: "cities#new", as: "new_city"
