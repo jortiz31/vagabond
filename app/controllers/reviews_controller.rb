@@ -6,10 +6,8 @@ class ReviewsController < ApplicationController
 # display list of cities that a specific user belongs to
   def index
     @user = User.find(params[:id])
-<<<<<<< HEAD
     @cities = City.all
-=======
->>>>>>> 8d7c0d6d440312fd93686b2fba0d2e53f3a0f71a
+
     render :index
   end
 
@@ -17,7 +15,7 @@ class ReviewsController < ApplicationController
   def new
     @city = City.find(params[:id])
     @user = User.find(params[:id])
-<<<<<<< HEAD
+
     @review = Review.new
 
     render :new
@@ -32,9 +30,11 @@ class ReviewsController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
     @city = City.find(params[:id])
-    @user.reviews.push(@city)
-    redirect_to reviews_path
+    @review = Review.find(params[:id])
+
+    redirect_to user_review_path
   end
 
 
