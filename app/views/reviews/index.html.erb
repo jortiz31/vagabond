@@ -1,11 +1,8 @@
 
-<div class="reviewIndex">
-  <h1>Welcome to Reviews main page!</h1>
-  <p><% @reviews.each do |review|%></p>
-    <h3><%= review.username %></h3>
-    <h3><%= review.city_name %></h3>
-    <h3><%= review.rating %></h3>
-    <h3><%= review.description %></h3>
-
-  <% end %>
+<h1><%=@user.username%> has made reviews on the following cities:</h1>
+<ul>
+<% @cities.each do |city| %>
+<li><%= city.city_name %>, <%= city.country %> -- <%=link_to "See Review", review_path(current_user)  %>
+</li>
+<% end %>
 </ul>

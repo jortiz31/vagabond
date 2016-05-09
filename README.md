@@ -1,9 +1,9 @@
 # Vagabond-app
 **by Team VagaBabies**
 
-## A travel community for users to share destination tips posts about their favorite tropical locations around the world.
+### A travel community for users to share destination tips posts about their favorite tropical locations around the world.
 
-### Work flow
+#### Work flow
 - User lands on the homepage to view index page
 - User is able to click on either "log-in" or "sign-up"
 - Index page lists a collection of tropical cities
@@ -26,11 +26,12 @@
 
 - Create relationships between models
     - Model user **has_many** reviews
-    - Model city **has_many** reviews
+    - Model city **has_many** users
     - Model review **belongs_to** users
     - Model review **belongs_to** cities
+    - Model user **belongs_to** cities
 
 - Attributes of each model:
-    - User Model    =>  id, name, date joined, current city, email, password_digest
-    - City Model    =>  id, name, country, image, reviews
-    - Review Model  =>  userID, cityID, reviews
+    - User Model    => username(string), date_joined(string), current_city(string), email(string), password_digest(string)
+    - City Model    =>  city_name(string), country(string)
+    - Review Model  =>  description(string), rating(integer)
