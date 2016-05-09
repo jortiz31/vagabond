@@ -23,24 +23,24 @@
          <div class="navbar-brand"><%= link_to "Vagabond", "/" %></div>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <% if current_user %>
           <ul class="nav navbar-nav">
-            <% if current_user %>
-            <li class="nav nav-bar navbar-right"><%= current_user.username %></li>
             <li><%= link_to "Cities", user_cities_path(current_user) %></li>
             <li><%= link_to "Profile", user_path(current_user) %></li>
             <li><%= link_to "Log Out", logout_path %></li>
+            <li class="active-user">Logged in as: <strong><%= current_user.username %></strong></li>
           </ul>
             <% else %>
             <%= form_for :user, url: "/sessions", method: "post", :html => {:class => "navbar-form navbar-right"} do |f| %>
-            <div class="form-group">
-              <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
-            </div>
-            <div class="form-group">
-            <%= f.submit "Sign In", class: "btn btn-success" %>
-            </div>
+              <div class="form-group">
+                <%= f.text_field :email, placeholder: "Email", class: "form-control" %>
+              </div>
+              <div class="form-group">
+                <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+              </div>
+              <div class="form-group">
+              <%= f.submit "Sign In", class: "btn btn-success" %>
+              </div>
             <% end %>
           <% end %>
         </div><!--/.navbar-collapse -->
@@ -49,6 +49,14 @@
 
 
 <%= yield %>
+
+<hr>
+
+<footer>
+  <p>&copy; 2015 Company, Inc.</p>
+</footer>
+</div> <!-- /container -->
+
 
 
 <% flash.each do |name, msg| %>
