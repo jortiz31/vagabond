@@ -1,0 +1,25 @@
+.user-body{
+  padding-top:30px;
+}
+
+.logged {
+  font-size: 1em;
+}
+
+.jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.44), rgba(0, 0, 0, 0.61)), url(https://images.unsplash.com/photo-1430287974932-fedd98142f2d?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=0fae27b72a42bce684f65837cff9f020);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.jumbotron h1 {
+  color: #fff;
+}
+
+
+small {
+display: block;
+line-height: 1.428571429;
+color: #999;
+}
