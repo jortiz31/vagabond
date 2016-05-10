@@ -1,4 +1,19 @@
-# Vagabond-app
+ ,ggg,         ,gg                                                                                
+dP""Y8a       ,8P                                  ,dPYb,                                      8I 
+Yb, `88       d8'                                  IP'`Yb                                      8I 
+ `"  88       88                                   I8  8I                                      8I 
+     88       88                                   I8  8'                                      8I 
+     I8       8I ,gggg,gg    ,gggg,gg    ,gggg,gg  I8 dP       ,ggggg,    ,ggg,,ggg,     ,gggg,8I 
+     `8,     ,8'dP"  "Y8I   dP"  "Y8I   dP"  "Y8I  I8dP   88ggdP"  "Y8ggg,8" "8P" "8,   dP"  "Y8I 
+      Y8,   ,8Pi8'    ,8I  i8'    ,8I  i8'    ,8I  I8P    8I i8'    ,8I  I8   8I   8I  i8'    ,8I 
+       Yb,_,dP,d8,   ,d8b,,d8,   ,d8I ,d8,   ,d8b,,d8b,  ,8I,d8,   ,d8' ,dP   8I   Yb,,d8,   ,d8b,
+        "Y8P" P"Y8888P"`Y8P"Y8888P"888P"Y8888P"`Y88P'"Y88P"'P"Y8888P"   8P'   8I   `Y8P"Y8888P"`Y8
+                                 ,d8I'                                                            
+                               ,dP'8I                                                             
+                              ,8"  8I                                                             
+                              I8   8I                                                             
+                              `8, ,8I                                                             
+                               `Y8P"                                                             
 **by Team VagaBabies**
 
 ### A travel community for users to share destination tips posts about their favorite tropical locations around the world.

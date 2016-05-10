@@ -1,26 +1,43 @@
 class ReviewsController < ApplicationController
 
   before_action :logged_in?, only: [:show, :create]
-  before_action :get_id, only: [:show, :destroy, :edit, :update]
+  before_action  only: [:show, :destroy, :edit, :update]
 
 # display list of cities that a specific user belongs to
   def index
     @user = User.find(params[:id])
-    @cities = @user.cities
+    @cities = City.all
+
     render :index
   end
 
-#add reviews to user
-  def create
+  #add reviews to user
+  def new
+    @city = City.find(params[:id])
     @user = User.find(params[:id])
-    @user.reviews.push(current_user)
-    redirect_to reviews_path
+
+    @review = Review.new
+
+    render :new
+  end
+
+  def create
+    @review = Review.create(reviews_params)
+    @city = City.find(params[:id])
+    @city.reviews << @review
+
+    redirect_to city_path(@city)
   end
 
   def show
+    @user = User.find(params[:id])
+    @city = City.find(params[:id])
+    @review = Review.find(params[:id])
 
-    render :show
+    redirect_to user_review_path
   end
+
+
 
   def edit
     @user = User.find(params[:id])
@@ -41,11 +58,9 @@ class ReviewsController < ApplicationController
   end
 
   private
+
     def reviews_params
-      params.require(:reviews).permit(:city_name, :description, :rating)
+      params.require(:review).permit(:description, :rating)
     end
 
-    def get_id
-      @user = User.find(params[:id])
-    end
 end

@@ -1,18 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <%= form_for :review, url: create_review_path, method: "post", :html => {:class => "form-signin"} do |rev| %>
+        <h2 class="form-signin-heading"> <%= @city.city_name %> </h2>
+          <h3><small>Write a Review</small></h3>
+        <div class="form-group">
+          <%= rev.label :description, "Description", class: "sr-only" %>
+          <%= rev.text_area :description, placeholder: "description", class: "form-control", :required => true, autofocus: true %>
+        </div>
 
-<div class="reviewNew">
-  <%= form_for @review do |r| %>
-    <div>
-      <%= r.text_field :city_name %>
+        <div class="form-group">
+          <%= rev.label :rating, "rating", class: "sr-only" %>
+          <%= rev.number_field :rating, placeholder: "rating", class: "form-control", :required => true, autofocus: true %>
+        </div>
+        <%= rev.submit "Submit", class: "btn btn-lg btn-primary" %>
+      <% end %>
     </div>
-    <div>
-      <%= r.text_field :country %>
-    </div>
-    <div>
-      <%= r.number_field :rating %>
-    </div>
-    <div>
-      <%= r.text_field :description %>
-    </div>
-    <%= r.submit %>
-  <% end %>
-</div>
+  </div>
+</div> <!-- /container -->

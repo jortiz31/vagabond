@@ -1,10 +1,40 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8">
-      Welcome, <%= @user.username %>
-    <div class = "editButton">
-      <%= button_to "edit profile", @user, method: :patch, class: "btn btn-danger" %>
-    </div>
-    </div>
+<div class="user-body">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 col-offset-3">
+              <div class="well well-sm">
+                  <div class="row">
+
+                      <div class="col-sm-6 col-md-4">
+                          <img src="http://placehold.it/380x500" alt="" class="img-rounded img-responsive" />
+                      </div>
+
+                      <div class="col-sm-6 col-md-8">
+                          <h4>Username: <small> <%= @user.username %> </small></h4>
+                          <h4>Location: <small><%= @user.current_city %></small></h4>
+                          <h4>Email: <small><%= @user.email %></small></h4>
+                          <p class="profile">Joined On: <small><%= @user.created_at.strftime("%b %d, %Y") %> </small></p>
+
+                          <!-- Split button -->
+                        <div class="btn-group">
+                          <%= link_to 'Options <b class="caret"></b>'.html_safe, root_path, :id => 'setupdrop', :'data-toggle' => 'dropdown', :class => 'dropdown-toggle', class: "btn btn-warning btn-lg" %>
+                          <span class="sr-only">Toggle Dropdown</span>
+                          <ul class="dropdown-menu">
+                            <!-- <li><a href="#">Edit Profile</a></li> -->
+                            <li> <%= link_to "edit profile", edit_user_path(current_user) %> </li>
+                            <li> <%= link_to "delete profile", current_user, method: :delete %> </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <h4>cities and reviews testing</h4>
+                      <% @user.reviews.each do |cit| %>
+                        <%= cit.rating %>
+                        <%= cit.description %>
+                      <% end %>
+
+                  </div>
+              </div>
+          </div>
+      </div>
   </div>
 </div>
