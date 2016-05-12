@@ -1,14 +1,10 @@
 class UsersController < ApplicationController
   before_action :logged_in?, only: [:show]
 
+
   def index
     @users = User.all
     render :index
-  end
-
-  def show
-    @user = User.find(params[:id])
-    render :show
   end
 
   def new
@@ -18,13 +14,26 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+<<<<<<< HEAD
     login (@user)
     redirect_to @user
   end
 
+=======
+    login(@user)
+    redirect_to @user
+  end
+
+  def show
+    @user = User.find_by_id(params[:id])
+    render :show
+  end
+
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
   def edit
     user_id = params[:id]
     @user = User.find_by_id(user_id)
+
     render :edit
   end
 
@@ -32,17 +41,19 @@ class UsersController < ApplicationController
     user_id = params[:id]
     user = User.find_by_id(user_id)
     user.update_attributes(user_params)
+<<<<<<< HEAD
+    redirect_to user_path(user)
+  end
+=======
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
+
     redirect_to user_path(user)
   end
 
-  def destroy
-    user_id = params[:id]
-    user = User.find_by_id(user_id)
-    user.destroy(user_params)
-    flash[:success] = "User deleted"
-    redirect_to users_path(users)
-  end
+<<<<<<< HEAD
+=======
 
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
   private
 
   def user_params

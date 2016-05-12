@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 
 
 <div>
@@ -10,3 +11,12 @@
 
   <% end %>
 </div>
+=======
+<h1>User: <%=@user.username%>, has made reviews on the following cities:</h1>
+<ul>
+<% @cities.each do |city| %>
+<li><%= city.city_name %>, <%= city.country %> -- <%=link_to "See Review", review_path(current_user)  %>
+</li>
+<% end %>
+</ul>
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0

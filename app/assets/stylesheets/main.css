@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
  * Style tweaks please dont touch this CSS file -Jonathan
  * --------------------------------------------------
@@ -12,6 +13,45 @@ body {
 footer {
   padding: 30px 0;
 }
+=======
+
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+  background-color: slategray;
+}
+h1{
+  margin-left: 20px;
+  margin-top: 80px;
+  font-family: fantasy;
+  font-size: 30px;
+  font-weight: bolder;
+}
+h2{
+  margin-left: 10px;
+  font-family: cursive;
+}
+p{
+  margin-top: 10px;
+  margin-left: 10px;
+  color: black;
+  font: lucida;
+  font-family: fantasy;
+}
+.cityCount{
+  margin-left: 30px;
+  color: white;
+}
+.editButton{
+  margin-top: 20px;
+}
+footer {
+  padding: 30px 0;
+}
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
 
 .username {
   padding-top: 14px;
