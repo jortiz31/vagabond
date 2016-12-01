@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+/*
+ * Style tweaks please dont touch this CSS file -Jonathan
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  padding-top: 70px;
+}
+footer {
+  padding: 30px 0;
+}
+=======
 
 html,
 body {
@@ -35,6 +51,7 @@ p{
 footer {
   padding: 30px 0;
 }
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
 
 .username {
   padding-top: 14px;

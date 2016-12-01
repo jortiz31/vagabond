@@ -14,6 +14,12 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
+<<<<<<< HEAD
+    login (@user)
+    redirect_to @user
+  end
+
+=======
     login(@user)
     redirect_to @user
   end
@@ -23,6 +29,7 @@ class UsersController < ApplicationController
     render :show
   end
 
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
   def edit
     user_id = params[:id]
     @user = User.find_by_id(user_id)
@@ -34,14 +41,23 @@ class UsersController < ApplicationController
     user_id = params[:id]
     user = User.find_by_id(user_id)
     user.update_attributes(user_params)
+<<<<<<< HEAD
+    redirect_to user_path(user)
+  end
+=======
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
 
     redirect_to user_path(user)
   end
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
   private
+
   def user_params
-    params.require(:user).permit(:username, :current_city, :email, :password)
+    params.require(:user).permit(:username, :current_city, :email, :password) if params[:user]
   end
 
 end

@@ -1,11 +1,15 @@
 class ReviewsController < ApplicationController
 
   before_action :logged_in?, only: [:show, :create]
-  before_action :get_id, only: [:show, :destroy, :edit, :update]
+  before_action  only: [:show, :destroy, :edit, :update]
 
 # display list of cities that a specific user belongs to
   def index
+<<<<<<< HEAD
+    @user = User.find(params[:user_id])
+=======
     @user = User.find(params[:id])
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
     @cities = @user.cities
     render :index
   end
@@ -18,7 +22,12 @@ class ReviewsController < ApplicationController
   end
 
   def show
+<<<<<<< HEAD
+    @user = User.find(params[:user_id])
+    @review = @user.reviews
+=======
 
+>>>>>>> ee256b8aa044b257760eaa775c09b0f7437b62a0
     render :show
   end
 
